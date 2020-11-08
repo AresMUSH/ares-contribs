@@ -33,3 +33,5 @@ en:
       incorrect_format: "That's not the correct format. Please use `name(s)=message`"
 
       txt_new_scene_target_missing: "Please specify a target and message. Ex: txt/newscene Name=Message"
+
+      character_not_already_part_of_scene: "At least one recipient isn't in this scene! Please use `name(s)=message` to add more people."

@@ -9,6 +9,7 @@ module AresMUSH
                 scene = Scene[request.args[:scene_id]]
                 enactor = request.enactor
                 pose = request.args[:pose]
+                recipients_list_is_fully_qualified = false
 
                 if !enactor.txt_last_scene
                     enactor.update(txt_last_scene: [])
@@ -45,6 +46,8 @@ module AresMUSH
                         message = pose
                     else
                         # recipient_names = pose.first("=")
+                        # Set the r_l_i_f_q variable to true-- they explicitly said they want these people texted.
+                        recipients_list_is_fully_qualified = true
                         names = pose.first("=") ? pose.first("=").split(" ") : nil
                         message = pose.rest("=")
                     end
@@ -87,19 +90,25 @@ module AresMUSH
 
                         can_txt_scene = Scenes.can_edit_scene?(char, scene)
                         if (!can_txt_scene)
-                            Scenes.add_to_scene(scene, t('txt.recipient_added_to_scene',
-                            :name => char.name ),
-                            enactor, nil, true )
+                            # r_l_i_f_q means the texter deliberately added them. If false, it's an implicit add.
+                            if (recipients_list_is_fully_qualified)
+                                Scenes.add_to_scene(scene, t('txt.recipient_added_to_scene',
+                                :name => char.name ),
+                                enactor, nil, true )
 
-                            Rooms.emit_ooc_to_room scene_room,t('txt.recipient_added_to_scene',
-                            :name => char.name )
+                                Rooms.emit_ooc_to_room scene_room,t('txt.recipient_added_to_scene',
+                                :name => char.name )
 
-                            if (!scene.participants.include?(char))
-                              scene.participants.add char
-                            end
+                                if (!scene.participants.include?(char))
+                                  scene.participants.add char
+                                end
 
-                            if (!scene.watchers.include?(char))
-                              scene.watchers.add char
+                                if (!scene.watchers.include?(char))
+                                  scene.watchers.add char
+                                end
+                            else
+                                return { error: t('txt.character_not_already_part_of_scene',
+                                :recipients => recipient_names ) }
                             end
                         end
                     end
