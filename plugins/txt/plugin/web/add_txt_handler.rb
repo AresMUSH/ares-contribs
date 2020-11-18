@@ -94,21 +94,21 @@ module AresMUSH
                             if (!recipients_list_is_fully_qualified)
                                 return { error: t('txt.character_not_already_part_of_scene',
                                 :recipients => recipient_names ) }
-                            else
-                                Scenes.add_to_scene(scene, t('txt.recipient_added_to_scene',
-                                :name => char.name ),
-                                enactor, nil, true )
+                            end
+                            
+                            Scenes.add_to_scene(scene, t('txt.recipient_added_to_scene',
+                            :name => char.name ),
+                            enactor, nil, true )
 
-                                Rooms.emit_ooc_to_room scene_room,t('txt.recipient_added_to_scene',
-                                :name => char.name )
+                            Rooms.emit_ooc_to_room scene_room,t('txt.recipient_added_to_scene',
+                            :name => char.name )
 
-                                if (!scene.participants.include?(char))
-                                  scene.participants.add char
-                                end
+                            if (!scene.participants.include?(char))
+                              scene.participants.add char
+                            end
 
-                                if (!scene.watchers.include?(char))
-                                  scene.watchers.add char
-                                end
+                            if (!scene.watchers.include?(char))
+                              scene.watchers.add char
                             end
                         end
                     end
