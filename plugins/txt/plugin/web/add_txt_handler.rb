@@ -93,6 +93,7 @@ module AresMUSH
                             # r_l_i_f_q means the texter deliberately added them. If false, it's an implicit add.
                             if (!recipients_list_is_fully_qualified)
                                 return { error: t('txt.character_not_already_part_of_scene',
+                                :recipient => char.name,
                                 :recipients => recipient_names ) }
                             end
                             

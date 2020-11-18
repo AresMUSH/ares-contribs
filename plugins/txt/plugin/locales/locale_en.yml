@@ -34,5 +34,5 @@ en:
 
       txt_new_scene_target_missing: "Please specify a target and message. Ex: txt/newscene Name=Message"
 
-      character_not_already_part_of_scene: "At least one recipient isn't in this scene! Please use `name(s)=message` to add more people."
+      character_not_already_part_of_scene: "%{recipient} isn't in this scene yet. Please use `%{recipients}=message` if you want them added."
       newbies_cant_send_txts: "You must first be approved before you can send in-character text messages."
