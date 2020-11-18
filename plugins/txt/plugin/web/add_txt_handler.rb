@@ -91,7 +91,10 @@ module AresMUSH
                         can_txt_scene = Scenes.can_edit_scene?(char, scene)
                         if (!can_txt_scene)
                             # r_l_i_f_q means the texter deliberately added them. If false, it's an implicit add.
-                            if (recipients_list_is_fully_qualified)
+                            if (!recipients_list_is_fully_qualified)
+                                return { error: t('txt.character_not_already_part_of_scene',
+                                :recipients => recipient_names ) }
+                            else
                                 Scenes.add_to_scene(scene, t('txt.recipient_added_to_scene',
                                 :name => char.name ),
                                 enactor, nil, true )
@@ -106,9 +109,6 @@ module AresMUSH
                                 if (!scene.watchers.include?(char))
                                   scene.watchers.add char
                                 end
-                            else
-                                return { error: t('txt.character_not_already_part_of_scene',
-                                :recipients => recipient_names ) }
                             end
                         end
                     end
