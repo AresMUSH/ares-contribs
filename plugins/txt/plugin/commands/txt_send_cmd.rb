@@ -52,6 +52,12 @@ module AresMUSH
 
 
         def handle
+          # Is the texter approved?
+          if !enactor.is_approved?
+            client.emit_failure t('txt.newbies_cant_send_txts')
+            return
+          end
+          
           # Is scene real and can you text to it?
           if self.scene_id
             scene = Scene[self.scene_id]
@@ -158,6 +164,13 @@ module AresMUSH
 
           enactor.update(txt_last: list_arg(recipient_names))
           enactor.update(txt_scene: self.scene_id)
+          
+          # Update txt_last_scene as well. This prevents the scenario of:
+          # 1) txt Alice=message
+          # 2) txt/newscene Brandon=message
+          # 3) (webportal, in the new scene:) hello
+          # Message goes to Alice and adds Alice to scene, despite Alice not being last texted.
+          enactor.update(txt_last_scene: list_arg(recipient_names))
 
       end
       def log_command

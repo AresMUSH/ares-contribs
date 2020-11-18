@@ -26,6 +26,11 @@ module AresMUSH
     end
 
     def handle
+      # Is the texter approved?
+      if !enactor.is_approved?
+        client.emit_failure t('txt.newbies_cant_send_txts')
+        return
+      end
 
       self.names.each do |name|
         result = Character.named(name)
