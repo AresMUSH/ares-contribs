@@ -1,7 +1,7 @@
 # Text System
 
 ## Credit
-This plugin was originally coded by skew @ Ares Central, with a few updates and packaging by Tat @ Ares Central, and an unintentional-text prevention mechanism from Ell @ Ares Central.
+This plugin was originally coded by skew @ Ares Central, with a few updates and packaging by Tat @ Ares Central, and bugfixes and an unintentional-text prevention mechanism from Ell @ Ares Central.
 
 ## Overview
 
