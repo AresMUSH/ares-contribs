@@ -14,7 +14,7 @@ module AresMUSH
         case cmd.root
         when "txt"
           case cmd.switch
-          when "color"
+          when "color", "colour"
             return TxtColorCmd
           when "newscene"
             return TxtNewSceneCmd
