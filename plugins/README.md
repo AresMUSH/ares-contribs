@@ -22,6 +22,7 @@ You can install plugins directly from the game using `plugin/install <github url
 * [FFG](https://github.com/AresMUSH/ares-ffg-plugin) - Skills/chargen system based on FFG's Genesys RPG, with decent (but not perfect) support for the FFG Star Wars RPGs.
 * [LuckGive](https://github.com/spiritlake/ares-luckgive-plugin) - Give your luck points to other characters.
 * [Openweather](https://github.com/Mudpuppy12/ares-openweather-plugin) - Weather system that uses real weather data from https://openweathermap.org/
+* [Post Events](https://github.com/spiritlake/ares-postevent-plugin) - Post event changes to a forum.
 * [Prefs](https://github.com/AresMUSH/ares-prefs-plugin) - RP preference registry.
 * [Randomscene](https://github.com/spiritlake/ares-randomscene-plugin) - Suggest random scene prompts.
 * [Rpg](https://github.com/AresMUSH/ares-rpg-plugin) - Generic RPG plugin.
