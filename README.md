@@ -1,24 +1,24 @@
 # AresMUSH Extras
 
-Public contributions and extra plugins for AresMUSH game server.  
+"Extras" are community-contributed plugins, themes, and code snippets that are not part of the base AresMUSH installation.
+
 
 ## Plugins
 
-Within the [plugins](https://github.com/AresMUSH/ares-extras/tree/master/plugins) folder are additional plugins that you can add to your game.
-
+See [AresCentral](https://arescentral.aresmush.com/plugins) for available plugins.
 
 ## Themes
 
-In the [themes](https://github.com/AresMUSH/ares-extras/tree/master/themes) folder you'll find color/style themes for your web portal.
+See [AresCentral](https://arescentral.aresmush.com/themes) for a directory of available Web Portal themes.
 
 ## Snippets
 
 The [snippets](https://github.com/AresMUSH/ares-extras/tree/master/snippets) folder contains code, style or configuration tidbits.
 
-## License
-
-See [License](https://github.com/AresMUSH/ares-extras/blob/master/LICENSE.md)
-
 ## Contribution Guidlines
 
 See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/extra-contribs.html) if you want to contribute your own plugins or extras.
+
+## License
+
+See [License](https://github.com/AresMUSH/ares-extras/blob/master/LICENSE.md)
