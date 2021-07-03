@@ -13,7 +13,7 @@ The [snippets](https://github.com/AresMUSH/ares-extras/tree/master/snippets) fol
 
 ## Contribution Guidelines
 
-
+See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/submit-contribs.html) if you want to contribute.
 
 ## License
 
