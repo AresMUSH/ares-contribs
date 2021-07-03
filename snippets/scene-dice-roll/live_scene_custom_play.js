@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service';
 export default Component.extend({
   tagName: '',
   diceString: '',
+  showRollDice: false,
   
   gameApi: service(),
   flashMessages: service(),
@@ -13,7 +14,7 @@ export default Component.extend({
     rollDice() {
       let api = this.gameApi;
       let dice = this.diceString;
-      this.set('showRollDice', null);
+      this.set('showRollDice', false);
       this.set('diceString', '');
           
       if (!dice) {
