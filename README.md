@@ -1,23 +1,19 @@
 # AresMUSH Extras
 
-"Extras" are community-contributed plugins, themes, and code snippets that are not part of the base AresMUSH installation.
+This repo is for code tidbits that are not part of the standard AresMUSH installation.
 
 
-## Plugins
+## Plugins and Themes
 
-See [AresCentral](https://arescentral.aresmush.com/plugins) for available plugins.
-
-## Themes
-
-See [AresCentral](https://arescentral.aresmush.com/themes) for a directory of available Web Portal themes.
+Additional plugins and themes can be found in the [AresCentral](https://arescentral.aresmush.com/) directory.
 
 ## Snippets
 
 The [snippets](https://github.com/AresMUSH/ares-extras/tree/master/snippets) folder contains code, style or configuration tidbits.
 
-## Contribution Guidlines
+## Contribution Guidelines
 
-See the [AresMUSH submission guidelines](https://aresmush.com/tutorials/code/extra-contribs.html) if you want to contribute your own plugins or extras.
+
 
 ## License
 
